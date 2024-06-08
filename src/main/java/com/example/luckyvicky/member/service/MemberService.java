@@ -1,5 +1,7 @@
 package com.example.luckyvicky.member.service;
 
+import com.example.luckyvicky.common.exception.ErrorCode;
+import com.example.luckyvicky.common.exception.LuckyVickyException;
 import com.example.luckyvicky.member.entity.Member;
 import com.example.luckyvicky.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +19,6 @@ public class MemberService {
 
     public Member findByEmail(String email){
         return memberRepository.findByEmail(email)
-                .orElseThrow(() -> new NoSuchElementException());
+                .orElseThrow(() -> new LuckyVickyException(ErrorCode.MEMBER_NOT_FOUND));
     }
 }
