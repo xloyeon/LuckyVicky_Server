@@ -34,6 +34,11 @@ dependencies {
 
     //spring boot validation
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    //Webflux
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    implementation 'io.netty:netty-resolver-dns-native-macos:4.1.72.Final:osx-aarch_64'
 }
 
 tasks.named('test') {
