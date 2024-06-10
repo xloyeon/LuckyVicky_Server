@@ -25,7 +25,7 @@ public class MemberService {
 
     public Member findByEmail(String email){
         return memberRepository.findByEmail(email)
-                .orElseThrow(() -> new LuckyVickyException(ErrorCode.MEMBER_NOT_FOUND));
+                .orElse(null);
     }
 
     @Transactional

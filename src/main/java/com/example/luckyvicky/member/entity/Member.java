@@ -19,7 +19,6 @@ public class Member {
     private Long id;
 
     @Email
-    @NotNull
     private String email;
 
     @Builder
